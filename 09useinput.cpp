@@ -10,7 +10,7 @@ int main ()
     int age;
 
     std::cout << "WHAT YOUR NAME ? ";
-    std::getline(std::cin >> std::ws, name );
+    std::getline(std::cin >> std::ws,name);
 
     std::cout << "what your age ";
     std::cin >> age;

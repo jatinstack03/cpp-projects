@@ -61,14 +61,7 @@ int main ()
         default:
 
         std::cout << "Please enter in only numbers between 1 to 12";
-
     }
-   
-
-    return 0;
-    
- 
-
-
+     return 0;
 }
     

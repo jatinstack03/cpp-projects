@@ -13,7 +13,7 @@ int main()
     if (age >=18){
         std::cout<< "YOUR ARE OLD TO ENTER THIS SITE  :";
     }
-    else if(age < 0) {
+    else if(age <= 0) {
         std::cout << "YOU HAVEN'T BEEN BORN YET ! ";
     }
     else if (age >= 100) {

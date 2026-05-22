@@ -22,8 +22,8 @@ int main()
     }
     else {
      std :: cout << "YOU ARE NOT OLD ENOUGH TO ENTER  ! ";
-
     }
-    return 0;
+
+     return 0;
 
 }

@@ -10,6 +10,6 @@ int main(){
 
     std::cout << " HAPPY NEW YEAR \n";
     
-    RETURN 0;
+    return 0;
 
 }

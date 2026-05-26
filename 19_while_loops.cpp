@@ -8,6 +8,8 @@ int main(){
         std::cout << "Enter Your name: ";
         std::getline(std::cin,name);
 
+        
+
     }
     std::cout << "Hello " << name;
     

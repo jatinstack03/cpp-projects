@@ -1,4 +1,7 @@
 #include<iostream>
+
+
+// A for loop in C++ repeats a block of code a specific number of times.
 int main(){
 
     for(int i = 1;i<=10;i++)

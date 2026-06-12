@@ -1,6 +1,6 @@
 #include<iostream>
 
-void happyBirthday(std::string name,int age);
+void happyBirthday(std::string name,int age); // decleration
 
 
 int main () 

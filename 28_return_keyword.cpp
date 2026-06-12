@@ -1,4 +1,5 @@
 #include<iostream>
+//  terminates the execution of a function immediately and hands control back to the calling function.
 
 double square(double lenght);
 double cube(double lenght);

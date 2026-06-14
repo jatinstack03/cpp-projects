@@ -10,7 +10,7 @@ int main ()
         std::string name = "bro ";
         int age = 18;
 
-       happyBirthday(name, age);
+       happyBirthday(name, age); // ARGUMENTS
       
        
     return 0;

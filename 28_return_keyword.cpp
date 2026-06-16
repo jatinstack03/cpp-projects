@@ -1,5 +1,6 @@
 #include<iostream>
 //  terminates the execution of a function immediately and hands control back to the calling function.
+//  It can optionally pass a value back to the caller, depending on the function's return type.
 
 double square(double lenght);
 double cube(double lenght);

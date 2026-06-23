@@ -18,7 +18,7 @@ int main() {
         cout << "3. Withdraw Money\n";
         cout << "4. Exit\n";
 
-        cin >> choice; // ✅ FIXED: take user input
+        cin >> choice; // 
 
         switch(choice) {
             case 1:

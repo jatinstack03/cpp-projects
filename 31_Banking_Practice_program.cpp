@@ -1,6 +1,5 @@
-#include <iostream>  //lets us use input/output (cin, cout).
-using namespace std;  //saves us from writing std::cout every time.
-
+#include <iostream>  // lets us use input/output (cin, cout).
+using namespace std; // saves us from writing std::cout every time.
 
 void showBalance(double balance);
 double deposit();
@@ -17,37 +16,34 @@ int main() {
         cout << "1. Show Balance\n";
         cout << "2. Deposit Money\n";
         cout << "3. Withdraw Money\n";
-        cout << "4. Exit\n";//cin >> choice; → user enters a number (1–4).
+        cout << "4. Exit\n";
 
+        cin >> choice; // ✅ FIXED: take user input
 
-        switch(choice) {    // decides what to do based on user input.
-
-            case 1: //  calls showBalance.
+        switch(choice) {
+            case 1:
                 showBalance(balance);
                 break;
-            case 2:  // adds deposit amount to balance.
-
+            case 2:
                 balance += deposit();
                 break;
-            case 3: //  subtracts withdrawal amount (if valid).
-
+            case 3:
                 balance -= withdraw(balance);
                 break;
-            case 4: //  → exits program.
+            case 4:
                 cout << "THANKS FOR VISITING!\n";
                 break;
-            default: //handles wrong input.
+            default:
                 cout << "Invalid choice!\n";
         }
-    } while(choice != 4);  //keeps looping until user chooses Exit.
-
+    } while(choice != 4);
 
     return 0;
 }
 
 void showBalance(double balance) {
     cout << "Your balance is: ₹" << balance << endl;
-}  // Prints the current balance.
+}
 
 double deposit() {
     double amount;
@@ -59,11 +55,7 @@ double deposit() {
         cout << "Invalid deposit amount!\n";
         return 0;
     }
-// } Asks user for deposit amount.
-
-// If valid (>0), returns it.
-
-// If invalid, returns 0.
+} 
 
 double withdraw(double balance) {
     double amount;
@@ -78,12 +70,4 @@ double withdraw(double balance) {
     } else {
         return amount;
     }
-} // Asks user for withdrawal amount.
-
-// Checks:
-
-// More than balance → not allowed.
-
-// Negative → not allowed.
-
-// Otherwise → returns amount.
+}

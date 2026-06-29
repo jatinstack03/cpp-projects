@@ -1,3 +1,5 @@
+//                               Mini ATM Simulator in C++
+
 #include <iostream>  // lets us use input/output (cin, cout).
 using namespace std; // saves us from writing std::cout every time.
 

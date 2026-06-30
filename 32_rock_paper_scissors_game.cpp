@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ctime>
 
 char getUserChoise();
 char getComputerChoise();
@@ -12,6 +13,14 @@ int main() {
      player = getUserChoise();
      std::cout << "your choice :";
      showChoice(player);
+
+     computer = getComputerChoise();
+     std::cout << "Computer choice ";
+     showChoice(computer);
+
+     showWinner(player, computer);
+
+
     return 0;
 }
 
@@ -35,6 +44,16 @@ char getUserChoise(){
 
 }
 char getComputerChoise(){
+    srand(time(0));
+    int num = rand() % 3 + 1;
+
+    switch(num) {
+        case 1:  return 'r';
+        case 2:  return 'p';
+        case 3:  return 's';
+    }
+
+    
 
 
 }
@@ -52,5 +71,50 @@ void showChoice(char choice){
 
 }
 void showWinner(char player, char computer){
+    switch(player)
+    {
+        case 'r' : if(computer == 'r'){
+            std::cout << "it is tie ! \n";
+
+
+        }
+        else if(computer == 'p'){
+            std::cout << "You lose";
+
+        }
+            else{
+            std::cout << "You win  ";
+        }
+        break;
+
+        case 'p' : if(computer == 'r'){
+            std::cout << "You win ! \n";
+
+
+        }
+        else if(computer == 'p'){
+            std::cout << "You Tie";
+
+        }
+            else{
+            std::cout << "You lose  ";
+        }
+        break;
+
+        case 's' : if(computer == 'r'){
+            std::cout << "You lose  ! \n";
+
+
+        }
+        else if(computer == 'p'){
+            std::cout << "You win";
+
+        }
+            else{
+            std::cout << "it's Tie  ";
+        }
+        break;
+        
+    }
 
 }

@@ -4,23 +4,24 @@ double getTotal(double prices[],int size);
 
 int main() 
 {
-        double prices[] = {33.3,22.3,4.4,53.3};
-        int size = sizeof(prices)/sizeof(prices[0]);
-        double total = getTotal(prices,size);
+  double prices[] = {22.2,34.3,23.2,32.3,23.2};
+  int size = sizeof(prices)/sizeof(prices[0]);
+  double total = getTotal(prices,size);
 
-        std::cout << "$" << total;
+  std::cout << "$" << total;
 
-
-        return 0;
+  return 0;
 }
 
-double getTotal(double prices[], int size)
+double getTotal(double prices[],int size) 
 {
-        double total = 0;
-        
-        for(int i = 0;i < size;i++){
-                total += prices[i];
+   double total = 0;
 
-        }
-        return total;
+   for(int i = 0;i < size; i++)
+   {
+        total += prices;
+   }
+
+   return total;
+
 }

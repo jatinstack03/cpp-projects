@@ -26,6 +26,7 @@ void sort(int array[], int size) {
         // Inner loop: compare adjacent elements
         for(int j = 0; j < size - i - 1; j++) {
             // Swap if elements are out of order
+            
             if(array[j] > array[j + 1]) {
                 temp = array[j];
                 array[j] = array[j + 1];

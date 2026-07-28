@@ -46,6 +46,7 @@ int main()
 int searchArray(int array[], int size, int element)
 {
      // loop through the array
+     
      for(int i = 0; i < size; i++)
      {
         // check if the current element matches the target

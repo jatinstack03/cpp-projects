@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    const int SIZE = 5; // Define the size of the array
+    int numbers[SIZE];   // Declare a fixed-size array
+
+    std::cout << "Enter " << SIZE << " integers:\n";
+
+    // Loop to collect user input for each element
+    for (int i = 0; i < SIZE; ++i) {
+        std::cout << "Element " << i + 1 << ": ";
+        std::cin >> numbers[i]; 
+    }
+
+    // Optional: Print the array to verify
+    std::cout << "\nYou entered: ";
+    for (int i = 0; i < SIZE; ++i) {
+        std::cout << numbers[i] << " ";
+    }
+    
+    return 0;
+}

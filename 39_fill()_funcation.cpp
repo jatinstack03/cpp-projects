@@ -1,19 +1,25 @@
 #include<iostream>
- 
-// fill() == FILLS A RANGE OF ELEMENTS WITH A
-//           SPECIFIED VALUE FILL(BEGIN, END, VALUE)
-int main() {
-std::string foods[100];
 
-fill(foods, foods+100,"pizza");
-
-for(std::string food : foods)
+int main()
 {
-    std::cout << food << '\n';
 
+    // FILL = FILLS A RANGE OF ELEMANTS WITH A SPECIFIED VALUES 
+    //          FILL(BEGIN,END,VALUE)
+   
+  const int SIZE = 100;
 
-}
+  std::string foods[SIZE];
 
-return 0;
+  fill(foods,foods+SIZE,"PIZZA");
 
+  for(std::string food :foods)
+  {
+    std::cout << food << std::endl;
+
+  }
+
+  return 0;
+
+   
+   
 }

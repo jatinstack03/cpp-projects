@@ -16,36 +16,40 @@ int main()
 
      char answerKey[] = {'C','B','A','B'};
 
-
      int size = sizeof(questions)/sizeof(questions[0]);
      char guess;
      int score;
 
-     for(int i = 0; i < size;i++){
-        std::cout << "*****************" << '\n';
-        std::cout << questions[i] << '\n';
-         std::cout << "*****************" << '\n';
+     for(int i = 0; i < size; i++) {
+
+      std::cout << questions[i] << '\n';
          
-         for(int j = 0; j < sizeof(options[i])/sizeof(options[i][0]);j++) {
 
-            std::cout << options[i][j] << '\n';
+      for(j = 0;j < sizeof(options[i])/sizeof(options[i][0]);j++) {
 
-         }
+         std::cout << options[i][j] << '\n';
 
-         std::cin >> guess;
-         guess = toupper(guess);
 
-         if(guess  = answerKey[i]){
-            std::cout << "CORRECT \n";
-            score++;
+      }
 
-         }else{
-            std::cout << "Wrong : \n";
-            std::cout << "Answer :" << answerKey[i] << '\n';
-            
-         }
+
+      std::cin >> guess;
+      guess = toupper(guess);
+
+      if(guess == answerKey[i]) {
+
+         std::cout << "CORRECT\n";
+         score++;
+
+
+      }else{
+         std::cout << "WRONG : \n";
+         std::cout << "ANSWER : \n" << answerKey[i] << '\n';
+
+
+
+      }
+
+
+      return 0;
      }
-     
-    return 0;
-
-}

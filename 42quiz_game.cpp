@@ -18,14 +18,14 @@ int main()
 
      int size = sizeof(questions)/sizeof(questions[0]);
      char guess;
-     int score;
+     int score = 0;
 
      for(int i = 0; i < size; i++) {
 
       std::cout << questions[i] << '\n';
          
 
-      for(j = 0;j < sizeof(options[i])/sizeof(options[i][0]);j++) {
+      for(int j = 0;j < sizeof(options[i])/sizeof(options[i][0]);j++) {
 
          std::cout << options[i][j] << '\n';
 
@@ -52,4 +52,5 @@ int main()
 
 
       return 0;
-     }
+   }
+}   

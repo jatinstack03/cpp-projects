@@ -11,7 +11,7 @@ int main()
     std::string name = "jatin";
     int age = 18;
     std::string freePizzas[5] = {"pizza1","pizza2","pizza3","pizza4","pizza5"};
-
+    
     std::string *pName = &name;
     int *pAge = &age;
     std::string *pFreepizzas = freePizzas;

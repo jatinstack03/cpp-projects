@@ -18,7 +18,7 @@ int main() {
 
     student1.name = "jatin";
     student1.age = 18;
-    student1.number = 9316518604;
+    student1.number = 1030;
 
     std::cout << student1.name << '\n';
     std::cout << student1.age << '\n';

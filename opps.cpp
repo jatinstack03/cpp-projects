@@ -1,43 +1,44 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Teacher {
-public:
-    string name;     // teacher ka naam
-    string dept;     // department
-    string subject;  // subject
-    double salary;   // salary
+class teacher {
+    private:
+          double salary;
+    public:
+           string name;
+           string dept; 
+           string subject;
 
-    // department change karne ka function
-    void changeDept(string newDept) {
+    void changeDept(string newDept){
         dept = newDept;
+
     }
 
-    // teacher details print karne ka function
-    void printInfo() {
-        cout << "Name: " << name << endl;
-        cout << "Subject: " << subject << endl;
-        cout << "Department: " << dept << endl;
-        cout << "Salary: " << salary << endl;
+    void setsalary(double s) {
+        salary = s;
     }
-}; // <- class ke baad semicolon zaroori hai
+
+    double getsalary() {
+        return salary;
+
+    }
+
+};
 
 int main() {
-    Teacher t1; // Teacher object banaya
 
-    // object ke fields set karna
-    t1.name = "Jatin";
-    t1.subject = "C++";
-    t1.dept = "Computer Science";
-    t1.salary = 25000;
+    teacher t1;
+    t1.name = "jatin";
+    t1.subject = "c++";
+    t1.dept = "Computer science";   
+    
+    t1.setsalary(30000);
 
-    // details print karna
-    t1.printInfo();
-
-    // department change karna
-    t1.changeDept("Information Technology");
-    cout << "\nAfter department change:\n";
-    t1.printInfo();
+    cout << t1.name << endl;
+    cout << t1.getsalary()<< endl;
 
     return 0;
+
+
+
 }

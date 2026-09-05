@@ -1,44 +1,51 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
-class teacher {
+class Teacher {
+    
     private:
-          double salary;
-    public:
-           string name;
-           string dept; 
-           string subject;
 
-    void changeDept(string newDept){
+    double salary;
+
+    public:
+
+    string name;
+    string course;
+    string dept;
+    string subject;
+
+    void changeDept(string newDept) { 
+        
         dept = newDept;
 
     }
 
-    void setsalary(double s) {
+    void setsalary(double s ) {
+
         salary = s;
+
+
     }
 
     double getsalary() {
         return salary;
-
     }
+
 
 };
 
 int main() {
 
-    teacher t1;
+    Teacher t1;
     t1.name = "jatin";
-    t1.subject = "c++";
-    t1.dept = "Computer science";   
+    t1.course = "bsc it";
+    t1.subject = "computer information";
     
     t1.setsalary(30000);
 
-    cout << t1.name << endl;
-    cout << t1.getsalary()<< endl;
+    cout << t1.getsalary() << endl;
 
     return 0;
-
-
 
 }

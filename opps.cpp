@@ -10,6 +10,10 @@ class Teacher {
 
     public:
 
+    Teacher() {
+        dept = "computer science";
+    }
+
     string name;
     string course;
     string dept;
@@ -21,7 +25,7 @@ class Teacher {
 
     }
 
-    void setsalary(double s ) {
+    void setsalary(double s) {
 
         salary = s;
 
@@ -43,7 +47,9 @@ int main() {
     t1.subject = "computer information";
     
     t1.setsalary(30000);
-
+    
+    cout << t1.name << endl;
+    cout << t1.dept << endl;
     cout << t1.getsalary() << endl;
 
     return 0;

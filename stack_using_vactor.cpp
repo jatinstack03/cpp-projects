@@ -1,34 +1,35 @@
 #include<iostream>
 #include<vector>
 
+using namespace std;
+
 class stack{
 
-    std::vector<int> v;
+    vector<int>v;
 
     public:
 
-    void push(int val) {
+    void push(int val){
         v.push_back(val);
 
     }
 
-    void pop(){
+    void pop() {
         v.pop_back();
 
     }
 
     int top() {
         return v[v.size() - 1];
-
     }
 
     bool empty() {
         return v.size() == 0;
-
     }
 };
 
 int main() {
+
     stack s;
 
     s.push(10);
@@ -36,13 +37,10 @@ int main() {
     s.push(30);
 
     while(!s.empty()){
-        std::cout << s.top() << '\n';
+        cout << s.top() << '\n';
         s.pop();
-    
     }
-
-    std::cout << '\n';
-
+    cout << endl;
     return 0;
-}
 
+}

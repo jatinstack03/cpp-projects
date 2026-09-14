@@ -48,4 +48,4 @@ void printcar(Car &car) {
 
 // Function jo car ka colour change karega
 void paintcar(Car car, std::string color) {
-    car.colour = color; // Car ka
+    car.colour = color; 

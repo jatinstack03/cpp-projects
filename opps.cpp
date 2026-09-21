@@ -52,4 +52,6 @@ int main() {
     cout << t1.dept << endl;
     cout << t1.getsalary() << endl;
     return 0;
+
+
 }

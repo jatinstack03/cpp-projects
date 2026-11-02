@@ -20,8 +20,10 @@ int main() {
     s.pop();
     std::cout << "Top element after pop: " << s.top() << "\n";
 
+    
     // 4. Check if the stack is empty and clear it
     std::cout << "Is stack empty? " << (s.empty() ? "Yes" : "No") << "\n";
     
+
     return 0;
 }

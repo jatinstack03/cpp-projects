@@ -13,7 +13,7 @@
 //        using namespace first;
 
 //   std :: cout  <<first::x;
- 
+ //using namespace std;
     
 #include<iostream>
 

@@ -4,13 +4,13 @@
 // typedef = RESERVED KEYWORD USED TO CREATE AN ADDITIONAL NAME
 //          (ALIAS) FOR ANOTHER DATA TYPE.
 //          NEW IDENTIFIER FOR AN EXISTING TYPE.
-//          HELPS WITH READBILITY AND RESUCES TYPOS.
+//          HELPS WITH READBILITY AND RESUCES TYPES.
 //          USE WHEN THERE IS A CLEAR BENEFIT REPLACED WITH "USING"(WORK BETTER / TEMLATES)
 
 
 // typedef std::vector<std::pair<std::string,int>> pairlist_t
-
-//typedef std::vector<std::pair<std::string,int>> pairlist_t
+// typedef std::vector<std::pair<std::string,int>> pairlist_t
+// typedef std::vector<std::pair<std::string,int>> pairlist_t
 // typedef std::string pairlist_t;
 // typedef int number_t;
 

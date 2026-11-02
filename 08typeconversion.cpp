@@ -5,7 +5,7 @@ int main ()
 
     // type conversion = conversion a value of one data type to another 
     //                   implicit = automic
-    //                   explicit = Precede vslue with new data type (int)
+    //                   explicit = Precede value with new data type (int)
 
     
 

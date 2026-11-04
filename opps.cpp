@@ -48,6 +48,7 @@ int main() {
     
     t1.setsalary(30000);
     
+    
     cout << t1.name << endl;
     cout << t1.dept << endl;
     cout << t1.getsalary() << endl;

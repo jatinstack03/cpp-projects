@@ -2,11 +2,16 @@
 
 class CircularQueue {
 private:
+
+
+
     int* arr;
     int front;
     int rear;
     int capacity;
 
+
+    
 public:
     // Initialize the queue with a fixed capacity
     CircularQueue(int size) {

@@ -19,13 +19,12 @@ int binarySearch(const std::vector<int>& arr, int target) {
         if (arr[mid] < target) {
             low = mid + 1;
         } 
-        // If target is smaller, ignore the right half
+        
         else {
             high = mid - 1;
         }
     }
 
-    // Element was not present in the vector
     return -1;
 }
 

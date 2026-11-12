@@ -21,10 +21,12 @@ public:
         rear = -1;
     }
 
-    // Free the dynamically allocated memory
+     // Free the dynamically allocated memory
     ~CircularQueue() {
         delete[] arr;
     }
+
+    
 
     // Check if the queue is full
     bool isFull() {

@@ -15,7 +15,9 @@ int binarySearch(const std::vector<int>& arr, int target) {
             return mid;
         }
         
-        // If target is greater, ignore the left half
+
+
+            // If target is greater, ignore the left half
         if (arr[mid] < target) {
             low = mid + 1;
         } 
@@ -23,6 +25,7 @@ int binarySearch(const std::vector<int>& arr, int target) {
         else {
             high = mid - 1;
         }
+    
     }
 
     return -1;

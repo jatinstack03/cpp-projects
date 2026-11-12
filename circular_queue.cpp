@@ -1,19 +1,15 @@
 #include <iostream>
+using namespace std;
 
 class CircularQueue {
 private:
-
-
-
     int* arr;
     int front;
     int rear;
     int capacity;
 
-
-    
 public:
-    // Initialize the queue with a fixed capacity
+    // Constructor to initialize the queue
     CircularQueue(int size) {
         capacity = size;
         arr = new int[capacity];
@@ -21,97 +17,81 @@ public:
         rear = -1;
     }
 
-     // Free the dynamically allocated memory
+    // Destructor to free allocated memory
     ~CircularQueue() {
         delete[] arr;
     }
 
-    
+    // Check if the queue is empty
+    bool isEmpty() {
+        return front == -1;
+    }
 
     // Check if the queue is full
     bool isFull() {
-        return ((rear + 1) % capacity == front);
+        return (rear + 1) % capacity == front;
     }
 
-    // Check if the queue is empty
-    bool isEmpty() {
-        return (front == -1);
-    }
-
-    // Insert an element into the queue
-    bool enqueue(int value) {
+    // Insert an element at the rear
+    void enqueue(int value) {
         if (isFull()) {
-            std::cout << "Queue Overflow: Cannot enqueue " << value << "\n";
-            return false;
+            cout << "Queue Overflow! Cannot insert " << value << endl;
+            return;
         }
-
-        // If the queue is completely empty, initialize front to 0
+        // If inserting the first element
         if (isEmpty()) {
             front = 0;
         }
-
-        // Move rear circularly and insert the value
         rear = (rear + 1) % capacity;
         arr[rear] = value;
-        return true;
+        cout << "Enqueued: " << value << endl;
     }
 
-    // Remove an element from the queue
-    bool dequeue() {
+    // Remove an element from the front
+    int dequeue() {
         if (isEmpty()) {
-            std::cout << "Queue Underflow: Cannot dequeue\n";
-            return false;
+            cout << "Queue Underflow! Queue is empty." << endl;
+            return -1;
         }
+        int removedValue = arr[front];
 
-        // If there's only one element left, reset the queue after removal
+        // If the queue had only one element, reset pointers
         if (front == rear) {
             front = -1;
             rear = -1;
         } else {
-            // Move front circularly
             front = (front + 1) % capacity;
         }
-        return true;
+        return removedValue;
     }
 
-    // Get the front element
-    int getFront() {
+    // Get the front element without removing it
+    int peek() {
         if (isEmpty()) {
-            std::cout << "Queue is empty\n";
+            cout << "Queue is empty." << endl;
             return -1;
         }
         return arr[front];
     }
 
-    // Get the rear element
-    int getRear() {
-        if (isEmpty()) {
-            std::cout << "Queue is empty\n";
-            return -1;
-        }
-        return arr[rear];
-    }
-
-    // Display all elements in the correct order
+    // Display all elements from front to rear
     void display() {
         if (isEmpty()) {
-            std::cout << "Queue is empty\n";
+            cout << "Queue is empty." << endl;
             return;
         }
-
-        std::cout << "Queue elements: ";
+        cout << "Queue elements: ";
         int i = front;
         while (true) {
-            std::cout << arr[i] << " ";
+            cout << arr[i] << " ";
             if (i == rear) break;
             i = (i + 1) % capacity;
         }
-        std::cout << "\n";
+        cout << endl;
     }
 };
 
 int main() {
-    // Create a circular queue that can hold 5 elements
     CircularQueue q(5);
 
     q.enqueue(10);
@@ -119,18 +99,18 @@ int main() {
     q.enqueue(30);
     q.enqueue(40);
     q.enqueue(50);
+
     q.display(); // Output: 10 20 30 40 50
 
-    q.enqueue(60); // Prints: Queue Overflow
+    cout << "Dequeued: " << q.dequeue() << endl; // Removes 10
+    cout << "Dequeued: " << q.dequeue() << endl; // Removes 20
 
-    q.dequeue();
-    q.dequeue();
-    q.display(); // Output: 30 40 50
-
-    std::cout << "Inserting elements to test wrap-around:\n";
+    // Wrap around and reuse freed space at the front
     q.enqueue(60);
     q.enqueue(70);
+
     q.display(); // Output: 30 40 50 60 70
+    cout << "Front element: " << q.peek() << endl;
 
     return 0;
 }

@@ -32,7 +32,7 @@ public:
         return (rear + 1) % capacity == front;
     }
 
-    // Insert an element at the rear
+    // Add an element to the queue (Enqueue)
     void enqueue(int value) {
         if (isFull()) {
             cout << "Queue Overflow! Cannot insert " << value << endl;
@@ -44,16 +44,16 @@ public:
         }
         rear = (rear + 1) % capacity;
         arr[rear] = value;
-        cout << "Enqueued: " << value << endl;
+        cout << "Inserted: " << value << endl;
     }
 
-    // Remove an element from the front
-    int dequeue() {
+    // Remove an element from the queue (Dequeue)
+    void dequeue() {
         if (isEmpty()) {
             cout << "Queue Underflow! Queue is empty." << endl;
-            return -1;
+            return;
         }
-        int removedValue = arr[front];
+        cout << "Removed: " << arr[front] << endl;
 
         // If the queue had only one element, reset pointers
         if (front == rear) {
@@ -62,7 +62,6 @@ public:
         } else {
             front = (front + 1) % capacity;
         }
-        return removedValue;
     }
 
     // Get the front element without removing it
@@ -74,7 +73,7 @@ public:
         return arr[front];
     }
 
-    // Display all elements from front to rear
+    // Display all elements in the queue
     void display() {
         if (isEmpty()) {
             cout << "Queue is empty." << endl;
@@ -92,7 +91,7 @@ public:
 };
 
 int main() {
-    CircularQueue q(5);
+    CircularQueue q(5); // Create a circular queue of capacity 5
 
     q.enqueue(10);
     q.enqueue(20);
@@ -100,17 +99,21 @@ int main() {
     q.enqueue(40);
     q.enqueue(50);
 
-    q.display(); // Output: 10 20 30 40 50
+    // Queue is now full
+    q.enqueue(60); 
+    q.display();
 
-    cout << "Dequeued: " << q.dequeue() << endl; // Removes 10
-    cout << "Dequeued: " << q.dequeue() << endl; // Removes 20
+    // Remove two elements to free up space at the front
+    q.dequeue();
+    q.dequeue();
+    q.display();
 
-    // Wrap around and reuse freed space at the front
+    // Insert new elements to demonstrate circular wrap-around
     q.enqueue(60);
     q.enqueue(70);
+    q.display();
 
-    q.display(); // Output: 30 40 50 60 70
-    cout << "Front element: " << q.peek() << endl;
+    cout << "Front element is: " << q.peek() << endl;
 
     return 0;
 }
